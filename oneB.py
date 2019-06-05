@@ -5,16 +5,16 @@ import sqlite3
 conn=sqlite3.connect('test.db')
 
 #创建表
-#print('Opened database successfully')
-#c=conn.cursor()
-#c.execute('''CREATE TABLE company
-        #(company INT PRIMARY KEY   NOT NULL,
-        # COUNT         INT   NOT NULL,
-        # WEIGHT        INT   NOT NULL,
-         #PRICE         INT   NOT NULL);''')
-#print('Table created successfully')
-#conn.commit()
-#conn.close()
+print('Opened database successfully')
+c=conn.cursor()
+c.execute('''CREATE TABLE company
+        (company INT PRIMARY KEY   NOT NULL,
+         COUNT         INT   NOT NULL,
+         WEIGHT        INT   NOT NULL,
+         PRICE         INT   NOT NULL);''')
+print('Table created successfully')
+conn.commit()
+conn.close()
 #插入数据
 conn=sqlite3.connect('test.db')
 c=conn.cursor()
